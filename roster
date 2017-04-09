@@ -1,0 +1,12 @@
+master:
+  host: 207.154.217.93
+  user: root
+slave-1:
+  host: 207.154.217.230
+  user: root
+slave-2:
+  host: 207.154.207.33
+  user: root
+slave-3:
+  host: 207.154.212.71
+  user: root

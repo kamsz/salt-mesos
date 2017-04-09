@@ -1,0 +1,38 @@
+{
+  "id": "wordpress",
+  "cmd": null,
+  "cpus": 0.1,
+  "mem": 128,
+  "disk": 0,
+  "instances": 1,
+  "container": {
+    "docker": {
+      "image": "wordpress",
+      "network": "BRIDGE",
+      "portMappings": [
+        {
+          "containerPort": 80,
+          "protocol": "tcp",
+          "name": null,
+          "labels": null
+        }
+      ]
+    },
+    "type": "DOCKER"
+  },
+  "env": {
+    "WORDPRESS_DB_HOST": "138.68.99.11:31782",
+    "WORDPRESS_DB_PASSWORD": "secret"
+  },
+  "healthChecks": [
+    {
+      "protocol": "HTTP",
+      "path": "/",
+      "portIndex": 0,
+      "gracePeriodSeconds": 60,
+      "intervalSeconds": 5,
+      "timeoutSeconds": 20,
+      "maxConsecutiveFailures": 3
+    }
+  ]
+}

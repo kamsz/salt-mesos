@@ -1,0 +1,6 @@
+salt-ssh:
+  config_dir: ./config
+  roster_file: ./roster
+  ssh_sudo: True
+  ignore_host_keys: True
+  log_level: info

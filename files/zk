@@ -1,0 +1,1 @@
+zk://{{ pillar.get('master_ip_address') }}:2181/mesos

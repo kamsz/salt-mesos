@@ -1,0 +1,36 @@
+{
+  "id": "mysql",
+  "cmd": null,
+  "cpus": 0.1,
+  "mem": 128,
+  "disk": 0,
+  "instances": 1,
+  "container": {
+    "docker": {
+      "image": "mysql",
+      "network": "BRIDGE",
+      "portMappings": [
+        {
+          "containerPort": 3306,
+          "protocol": "tcp",
+          "name": null,
+          "labels": null
+        }
+      ]
+    },
+    "type": "DOCKER"
+  },
+  "env": {
+    "MYSQL_ROOT_PASSWORD": "secret"
+  },
+  "healthChecks": [
+    {
+      "protocol": "TCP",
+      "portIndex": 0,
+      "gracePeriodSeconds": 60,
+      "intervalSeconds": 5,
+      "timeoutSeconds": 20,
+      "maxConsecutiveFailures": 3
+    }
+  ]
+}

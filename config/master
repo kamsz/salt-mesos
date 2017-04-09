@@ -1,0 +1,7 @@
+root_dir: ./
+file_roots:
+  base:
+    - ./
+pillar_roots:
+  base:
+    - ./pillar
